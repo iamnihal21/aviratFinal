@@ -54,7 +54,7 @@ export function Header() {
             <Link href="/" className="group flex items-center gap-3 outline-none ">
               <div className="relative w-10 h-10 ">
                 <Image
-                  src="/api/media/file/avirat-bba-bca-collage-logo-2.png"
+                  src="/api/media/file/avirat-bba-bca-collage-logo-1.png"
                   alt="Avirat Logo"
                   fill
                   className="object-contain "
