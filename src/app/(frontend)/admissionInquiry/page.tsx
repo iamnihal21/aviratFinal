@@ -9,8 +9,6 @@ interface PortalsMenuProps {
   onClose: () => void
 }
 
-export const revalidate = 60
-
 export default function AdmissionInquiry({ isOpen, onClose }: PortalsMenuProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
