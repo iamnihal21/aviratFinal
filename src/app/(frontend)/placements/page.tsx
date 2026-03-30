@@ -3,6 +3,8 @@ import configPromise from '@/payload.config'
 import PlacementsClient from './PlacementsClient'
 import { notFound } from 'next/navigation'
 
+export const revalidate = 60
+
 export default async function PlacementsPage() {
   const payload = await getPayload({ config: configPromise })
 

@@ -36,7 +36,7 @@ export default function StudentLogin() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100 p-4 font-sans pt-100">
+    <div className="min-h-screen flex items-center justify-center bg-slate-100 p-4 font-sans pt-24">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
         
         <div className="text-center mb-8">

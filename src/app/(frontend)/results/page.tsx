@@ -7,6 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/app
 import { Input } from '@/app/(frontend)/components/ui/input'
 import { Lock, KeyRound, AlertCircle } from 'lucide-react'
 
+export const revalidate = 60
+
 export default function ResultsPage() {
   const [step, setStep] = useState<'LOGIN' | 'CHANGE_PASSWORD' | 'VIEW_RESULTS'>('LOGIN')
   const [authData, setAuthData] = useState({ email: '', password: '', newPassword: '' })
