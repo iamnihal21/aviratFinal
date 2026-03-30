@@ -83,10 +83,6 @@ function SubjectCard({ subject, idx }: { subject: any; idx: number }) {
                   <BookOpen className="w-4 h-4" />
                   <span className="text-xs font-bold">Theory + Practical</span>
                 </div>
-
-                {/* <div className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  <ChevronRight className="w-5 h-5 text-primary" />
-                </div> */}
               </div>
             </div>
           </CardContent>
@@ -121,7 +117,7 @@ export function CourseStructure({ courseType, data }: CourseStructureProps) {
       </section>
     )
   }
-
+  console.log('Current Semester Data:', course.semesters[parseInt(activeSemester) - 1])
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Glow */}
@@ -154,6 +150,7 @@ export function CourseStructure({ courseType, data }: CourseStructureProps) {
         </div>
 
         {/* ✅ FIXED TABS */}
+        {/* Replace the Tabs section in subjects.tsx with this */}
         <Tabs value={activeSemester} className="w-full" onValueChange={setActiveSemester}>
           <div className="flex justify-center mb-12">
             <TabsList className="grid w-full grid-cols-3 md:grid-cols-6 mb-12 bg-white/50 backdrop-blur-md p-1 rounded-2xl border border-gray-100">
@@ -169,21 +166,48 @@ export function CourseStructure({ courseType, data }: CourseStructureProps) {
             </TabsList>
           </div>
 
-          {/* Subjects */}
-          <AnimatePresence mode="wait">
-            <TabsContent value={activeSemester} key={activeSemester} className="mt-0 outline-none">
+          <AnimatePresence mode="wait" initial={false}>
+            <TabsContent
+              value={activeSemester}
+              key={`sem-content-${courseType}-${activeSemester}`} // Improved unique key
+              forceMount={true} // Forces the component to stay in DOM for smoother transitions
+              className="mt-0 outline-none min-h-[400px] data-[state=inactive]:hidden"
+            >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
-                {course.semesters
-                  .find((_: any, idx: number) => (idx + 1).toString() === activeSemester)
-                  ?.subjects?.map((subject: any, idx: number) => (
-                    <SubjectCard key={subject.code || idx} subject={subject} idx={idx} />
-                  ))}
+                {(() => {
+                  // Safer way to get the subjects: Find the semester that matches our activeSemester string
+                  const currentSemester = course.semesters.find(
+                    (_: any, idx: number) => (idx + 1).toString() === activeSemester,
+                  )
+
+                  const subjects = currentSemester?.subjects || []
+
+                  if (subjects.length > 0) {
+                    return subjects.map((subject: any, idx: number) => (
+                      <SubjectCard
+                        key={subject.id || `subject-${activeSemester}-${idx}`}
+                        subject={subject}
+                        idx={idx}
+                      />
+                    ))
+                  }
+
+                  return (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="col-span-full py-20 text-center text-gray-400 font-medium border-2 border-dashed border-gray-100 rounded-[2rem]"
+                    >
+                      No subjects listed for Semester {activeSemester} yet.
+                    </motion.div>
+                  )
+                })()}
               </motion.div>
             </TabsContent>
           </AnimatePresence>
