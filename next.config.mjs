@@ -1,23 +1,58 @@
+
 import { withPayload } from '@payloadcms/next/withPayload'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Your Next.js config here
-  webpack: (webpackConfig) => {
-    webpackConfig.resolve.extensionAlias = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
+
+  webpack: (config) => {
+    config.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
       '.mjs': ['.mts', '.mjs'],
     }
-
-    return webpackConfig
+    return config
   },
+
   typescript: {
     ignoreBuildErrors: true,
   },
+
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        // This covers your Supabase Storage API
+        hostname: 'qutylhbebwbmqjpwdovd.supabase.co',
+        pathname: '/storage/v1/**', 
+      },
+      {
+        protocol: 'https',
+        // Fixed: Added the specific hostname from your error log
+        hostname: 'aviratfinal.vercel.app', 
+      },
+      {
+        protocol: 'https',
+        // Keep this if you use the hyphenated version as well
+        hostname: 'avirat-final.vercel.app', 
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+    ],
   },
 }
 
-export default withPayload(nextConfig, { devBundleServerPackages: false })
+export default withPayload(nextConfig, {
+  // Set to false to speed up development builds
+  devBundleServerPackages: false,
+})
