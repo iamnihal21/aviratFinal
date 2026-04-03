@@ -22,19 +22,10 @@ const footerLinks = {
     { name: 'Virtual Tour', href: '/campus' },
     { name: 'Campus Map', href: '/contact' },
   ],
-  // legal: [
-  //   { name: 'Privacy Policy', href: '#' },
-  //   { name: 'Terms of Use', href: '#' },
-  //   { name: 'Accessibility', href: '#' },
-  //   { name: 'Non-Discrimination', href: '#' },
-  // ],
 }
 
 const socialLinks = [
   { name: 'Instagram', href: 'https://www.instagram.com/avirat_bba_bca_college?igsh=amN3aGNyMjY2MG54', icon: Instagram },
-  // { name: 'LinkedIn', href: '#', icon: Linkedin },
-  // { name: 'YouTube', href: '#', icon: Youtube },
-  // { name: 'Twitter', href: '#', icon: Twitter },
 ]
 
 export function Footer() {
@@ -160,6 +151,10 @@ export function Footer() {
           {/* Copyright */}
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">
             © {new Date().getFullYear()} Avirat BBA & BCA College. All rights reserved.
+          </p>
+
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">
+            Developed by Nihal dave & team
           </p>
         </div>
       </div>
