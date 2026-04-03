@@ -22,19 +22,13 @@ const footerLinks = {
     { name: 'Virtual Tour', href: '/campus' },
     { name: 'Campus Map', href: '/contact' },
   ],
-  legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Use', href: '#' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Non-Discrimination', href: '#' },
-  ],
 }
 
 const socialLinks = [
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'YouTube', href: '#', icon: Youtube },
-  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'Instagram', href: 'https://www.instagram.com/avirat_bba_bca_college?igsh=amN3aGNyMjY2MG54', icon: Instagram },
+  // { name: 'LinkedIn', href: '#', icon: Linkedin },
+  // { name: 'YouTube', href: '#', icon: Youtube },
+  // { name: 'Twitter', href: '#', icon: Twitter },
 ]
 
 export function Footer() {
@@ -153,19 +147,6 @@ export function Footer() {
                 aria-label={social.name}
               >
                 <social.icon className="h-5 w-5" />
-              </Link>
-            ))}
-          </div>
-
-          {/* Legal Links (Simplified) */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-            {footerLinks.legal.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-[11px] font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors"
-              >
-                {link.name}
               </Link>
             ))}
           </div>
