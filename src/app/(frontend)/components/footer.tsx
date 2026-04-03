@@ -31,7 +31,7 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'Instagram', href: '#', icon: Instagram },
+  { name: 'Instagram', href: 'https://www.instagram.com/avirat_bba_bca_college?igsh=amN3aGNyMjY2MG54', icon: Instagram },
   // { name: 'LinkedIn', href: '#', icon: Linkedin },
   // { name: 'YouTube', href: '#', icon: Youtube },
   // { name: 'Twitter', href: '#', icon: Twitter },
@@ -144,7 +144,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Socials */}
-          {/* <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             {socialLinks.map((social) => (
               <Link
                 key={social.name}
@@ -155,7 +155,7 @@ export function Footer() {
                 <social.icon className="h-5 w-5" />
               </Link>
             ))}
-          </div> */}
+          </div>
 
           {/* Copyright */}
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">

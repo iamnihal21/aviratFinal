@@ -1119,7 +1119,7 @@ export interface HomeSetting {
   mapUrl?: string | null;
   address?: string | null;
   /**
-   * Highlight the key benefits of Avirat University (Location, Faculty, etc.)
+   * Highlight the key benefits of Avirat BBA & BCA College (Location, Faculty, etc.)
    */
   whyChooseUs?:
     | {
