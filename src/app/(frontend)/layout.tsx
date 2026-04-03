@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Avirat BBA & BCA College',
-  description: 'Avirat BBA & BCA College is a leading research institution offering undergraduate, graduate, and doctoral programs across engineering, sciences, humanities, and the arts.',
+  description: 'Avirat University is a leading research institution offering undergraduate, graduate, and doctoral programs across engineering, sciences, humanities, and the arts.',
   generator: 'v0.app',
   icons: {
     icon: '/favicon.ico',
