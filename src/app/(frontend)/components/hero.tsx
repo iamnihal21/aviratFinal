@@ -142,31 +142,22 @@ export function Hero({ data }: HeroProps) {
               <motion.span
                 initial={{ opacity: 0, letterSpacing: '0.5em' }}
                 animate={{ opacity: 1, letterSpacing: '0.2em' }}
-                className="text-primary font-bold text-xs md:text-sm uppercase mb-4 block"
+                className="text-white font-bold text-xs md:text-sm uppercase mb-4 block"
               >
                 {slides[activeSlide].highlight}
               </motion.span>
 
               <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tighter mb-6">
                 {slides[activeSlide].title}
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r to-primary from-accent">
                   {slides[activeSlide].subtitle}
                 </span>
               </h1>
 
-              <p className="max-w-xl mx-auto text-base md:text-lg text-gray-400 font-medium leading-relaxed mb-10">
+              <p className="max-w-xl mx-auto text-base md:text-lg text-gray-200 font-medium leading-relaxed mb-10">
                 {slides[activeSlide].description}
               </p>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
-                <div className="relative group cursor-pointer">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
-                  <button className="relative px-8 py-4 bg-black rounded-full text-white font-bold text-sm border border-white/10 flex items-center divide-x divide-gray-600">
-                    <span className="pr-6">Start Journey</span>
-                    <span className="pl-6 text-secondary group-hover:text-white transition-colors">2026</span>
-                  </button>
-                </div>
-              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>
