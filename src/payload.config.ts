@@ -26,6 +26,7 @@ import { Admissions } from './globals/Admissions'
 import { Campus } from './globals/Campus'
 import { PlacementsSettings } from './globals/PlacementsSettings'
 import { HomeSettings } from './globals/HomeSettings'
+import { Inquiries } from './collections/Inquires'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -58,6 +59,7 @@ export default buildConfig({
     Payments,
     Students,
     Results,
+    Inquiries,                                                            
   ],
 
   globals: [

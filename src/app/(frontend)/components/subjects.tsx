@@ -239,10 +239,10 @@ export function CourseStructure({ courseType, data }: CourseStructureProps) {
                   className="bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-xl flex flex-col items-center text-center transition-all"
                 >
                   <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center mb-2">
-                    <GraduationCap className="w-4 h-4 text-primary" />
+                    <GraduationCap className="w-4 h-4 text-secondary" />
                   </div>
 
-                  <span className="text-white text-xs font-semibold">{career.role}</span>
+                  <span className="text-green-200 text-sm font-bold">{career.role}</span>
                 </motion.div>
               ))}
             </div>
