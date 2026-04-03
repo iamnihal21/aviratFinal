@@ -102,7 +102,7 @@ const staggerChildren = {
           <motion.div ref={heroRef} initial="hidden" animate="visible" variants={staggerChildren} className="max-w-4xl">
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-8 border border-gray-200 shadow-sm">
               <Sparkles className="w-4 h-4 text-primary animate-bounce" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em]">About Avirat University</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em]">About Avirat BBA & BCA College</span>
             </motion.div>
             
             <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85]">

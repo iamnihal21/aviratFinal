@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react'
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react'
 
 const footerLinks = {
   academics: [
@@ -22,19 +22,11 @@ const footerLinks = {
     { name: 'Virtual Tour', href: '/campus' },
     { name: 'Campus Map', href: '/contact' },
   ],
-  legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Use', href: '#' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Non-Discrimination', href: '#' },
-  ],
+  
 }
 
 const socialLinks = [
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'YouTube', href: '#', icon: Youtube },
-  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'Instagram', href: 'https://www.instagram.com/avirat_bba_bca_college?igsh=amN3aGNyMjY2MG54', icon: Instagram },
 ]
 
 export function Footer() {
@@ -157,22 +149,9 @@ export function Footer() {
             ))}
           </div>
 
-          {/* Legal Links (Simplified) */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-            {footerLinks.legal.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-[11px] font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
           {/* Copyright */}
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">
-            © {new Date().getFullYear()} Avirat University
+            © {new Date().getFullYear()} Avirat BBA & BCA College. All rights reserved.
           </p>
         </div>
       </div>

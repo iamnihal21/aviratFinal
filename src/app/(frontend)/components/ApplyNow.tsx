@@ -71,7 +71,7 @@ export function ApplyNow() {
               >
                 <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[2.5rem] w-full max-w-md text-center lg:text-left">
                   <p className="text-white/60 text-lg mb-8">
-                    Join a community of innovators, leaders, and creators at Avirat University.
+                    Join a community of innovators, leaders, and creators at Avirat College.
                   </p>
                   
                   <Button

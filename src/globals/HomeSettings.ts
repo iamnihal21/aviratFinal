@@ -131,7 +131,7 @@ export const HomeSettings: GlobalConfig = {
               type: 'array',
               admin: {
                 description:
-                  'Highlight the key benefits of Avirat University (Location, Faculty, etc.)',
+                  'Highlight the key benefits of Avirat BBA & BCA College (Location, Faculty, etc.)',
               },
               fields: [
                 { name: 'title', type: 'text', required: true },

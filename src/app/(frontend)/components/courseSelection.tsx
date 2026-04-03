@@ -64,7 +64,7 @@ export function CourseDialog({ onSelect }: CourseDialogProps) {
                 </div>
 
                 <h2 className="text-2xl font-bold mb-1 relative z-10">
-                  Welcome to Avirat University
+                  Welcome to Avirat BBA & BCA College
                 </h2>
                 <p className="text-white/80 text-sm relative z-10">
                   Choose your path to success

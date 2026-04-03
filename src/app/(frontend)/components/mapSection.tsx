@@ -42,54 +42,7 @@ export function MapSection() {
             referrerPolicy="no-referrer-when-downgrade"
           />
 
-          {/* 2. Floating Info Card (Glassmorphism) */}
-          {/* <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="absolute top-8 left-8 right-8 md:right-auto md:w-[400px] backdrop-blur-xl bg-white/80 border border-white/20 p-8 rounded-[2.5rem] shadow-2xl"
-          >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/30">
-                <MapPin className="text-white w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="font-black text-xl text-gray-900">Avirat University</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-widest">Main Campus</p>
-              </div>
-            </div>
-
-            <div className="space-y-6 mb-8">
-              <div className="flex gap-4">
-                <Navigation className="w-5 h-5 text-gray-400 mt-1" />
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Sector 15, Near GIDC, <br />
-                  Gandhinagar, Gujarat 382016
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <Clock className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <p className="text-sm text-gray-900 font-bold">Office Hours</p>
-                  <p className="text-sm text-gray-600">Mon - Sat: 9:00 AM - 5:00 PM</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Phone className="w-5 h-5 text-gray-400 mt-1" />
-                <p className="text-sm text-gray-600">+91 98765 43210</p>
-              </div>
-            </div> */}
-
-            {/* <Button className="w-full bg-gray-900 hover:bg-primary text-white py-6 rounded-2xl font-bold transition-all group">
-              Get Directions
-              <Navigation className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Button> */}
-          {/* </motion.div> */}
-
-          {/* Bottom Accent Decor */}
-          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
         </div>
       </div>
     </section>
