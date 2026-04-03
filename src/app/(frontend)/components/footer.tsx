@@ -5,10 +5,10 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail, Phone, MapPin } 
 
 const footerLinks = {
   academics: [
-    { name: 'Undergraduate Programs', href: '/programs' },
-    { name: 'Graduate Programs', href: '/programs' },
+    { name: 'Undergraduate Programs', href: '/admissions' },
+    { name: 'Graduate Programs', href: '/admissions' },
     { name: 'Research', href: '/research' },
-    { name: 'Academic Calendar', href: '/news' },
+    { name: 'Academic Calendar', href: '/admissions' },
   ],
   admissions: [
     { name: 'Apply Now', href: '/admissions' },
@@ -27,7 +27,7 @@ const footerLinks = {
     { name: 'Terms of Use', href: '#' },
     { name: 'Accessibility', href: '#' },
     { name: 'Non-Discrimination', href: '#' },
-  ]
+  ],
 }
 
 const socialLinks = [
@@ -41,10 +41,8 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-white border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-10">
-        
         {/* Main Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
-          
           {/* Brand & Identity Column */}
           <div className="col-span-2 lg:col-span-2 pr-0 lg:pr-20">
             <Link href="/" className="inline-block mb-6 group">
@@ -53,27 +51,35 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
-              Empowering the next generation of engineers and leaders through industry-aligned curriculum and hands-on research.
+              Empowering the next generation of engineers and leaders through industry-aligned
+              curriculum and hands-on research.
             </p>
-            
+
             <div className="space-y-4">
               <div className="flex items-start gap-3 group">
                 <MapPin className="w-5 h-5 text-secondary mt-0.5" />
                 <address className="not-italic text-sm text-gray-400 leading-relaxed">
-                  Sector 15, Near GIDC,<br />
-                  Gandhinagar, Gujarat 382016
+                  Nr. Palladium mall, S.G. Highway Road,
+                  <br />
+                  Thaltej, Ahmedabad-380 054.
                 </address>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary" />
-                <a href="tel:+919876543210" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  +91 98765 43210
+                <a
+                  href="tel:+917046713410"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  +91 70467 13410
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-secondary" />
-                <a href="mailto:info@avirat.edu" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  info@avirat.edu
+                <a
+                  href="mailto:info@avirat.edu"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  aviratbba.bca.1709@gmail.com
                 </a>
               </div>
             </div>
@@ -81,11 +87,16 @@ export function Footer() {
 
           {/* Links Columns */}
           <div>
-            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white mb-6">Academics</h3>
+            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white mb-6">
+              Academics
+            </h3>
             <ul className="space-y-4">
               {footerLinks.academics.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-all hover:pl-1">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-all hover:pl-1"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -94,11 +105,16 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white mb-6">Admissions</h3>
+            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white mb-6">
+              Admissions
+            </h3>
             <ul className="space-y-4">
               {footerLinks.admissions.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-all hover:pl-1">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-all hover:pl-1"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -107,11 +123,16 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white mb-6">Campus</h3>
+            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white mb-6">
+              Campus
+            </h3>
             <ul className="space-y-4">
               {footerLinks.campus.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-all hover:pl-1">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-all hover:pl-1"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -122,7 +143,6 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          
           {/* Socials */}
           <div className="flex items-center gap-2">
             {socialLinks.map((social) => (
@@ -140,7 +160,11 @@ export function Footer() {
           {/* Legal Links (Simplified) */}
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
             {footerLinks.legal.map((link) => (
-              <Link key={link.name} href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors">
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-[11px] font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors"
+              >
                 {link.name}
               </Link>
             ))}

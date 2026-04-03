@@ -37,7 +37,7 @@ export function ApplyNow() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-primary-foreground/80 mb-8">
-                  <Sparkles className="w-4 h-4 text-primary" />
+                  <Sparkles className="w-4 h-4 text-gray-200 animate-bounce" />
                   <span className="text-xs font-bold uppercase tracking-widest text-white">Admissions Open 2026</span>
                 </div>
 
@@ -55,7 +55,7 @@ export function ApplyNow() {
                       transition={{ delay: 0.5 + (i * 0.1) }}
                       className="flex items-center gap-3 text-gray-400"
                     >
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                      <CheckCircle2 className="w-5 h-5 text-gray-400" />
                       <span className="text-sm font-medium">{benefit}</span>
                     </motion.div>
                   ))}

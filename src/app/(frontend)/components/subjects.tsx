@@ -141,7 +141,7 @@ export function CourseStructure({ courseType, data }: CourseStructureProps) {
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-4">
-            {course.title}
+            <span className='bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent'>{course.title}</span>
           </h2>
 
           <p className="text-gray-500 max-w-2xl text-lg">

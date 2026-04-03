@@ -59,7 +59,7 @@ export function MessageSection({ sanskritQuote, quoteTranslation }: MessageSecti
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-8"
         >
-          <Sparkles className="w-5 h-5 text-primary" />
+          <Sparkles className="w-5 h-5 text-primary animate-bounce" />
         </motion.div>
 
         {/* 2. Staggered Sanskrit Reveal */}

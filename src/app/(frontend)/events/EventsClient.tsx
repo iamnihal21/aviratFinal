@@ -122,7 +122,7 @@ export default function EventsClient({ eventsData }: { eventsData: any[] }) {
                         </div>
                         <div className="absolute bottom-4 left-4">
                           <Icon className="h-8 w-8 text-white" />
-                        </div>
+                        </div>  
                       </div>
                       <CardHeader>
                         <CardTitle className="text-xl group-hover:text-primary transition-colors">{event.title}</CardTitle>
@@ -138,9 +138,6 @@ export default function EventsClient({ eventsData }: { eventsData: any[] }) {
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <MapPin className="h-4 w-4 text-primary" /> {event.location}
                         </div>
-                        {/* <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent text-white group/btn">
-                          View Details <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1" />
-                        </Button> */}
                       </CardContent>
                     </Card>
                   </motion.div>

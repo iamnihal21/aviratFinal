@@ -6,7 +6,12 @@ export const revalidate = 60
 
 export default async function AdmissionsPage() {
   const payload = await getPayloadHMR({ config: configPromise })
-  const data = await payload.findGlobal({ slug: 'admissions' })
+  
+  // Fetch both Admission and Contact (for FAQs) globals
+  const [admissionsData, contactData] = await Promise.all([
+    payload.findGlobal({ slug: 'admissions' }),
+    payload.findGlobal({ slug: 'contact' })
+  ])
 
-  return <AdmissionsClient data={data} />
+  return <AdmissionsClient data={admissionsData} faqData={contactData?.faqs || []} />
 }

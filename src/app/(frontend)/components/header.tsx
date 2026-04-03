@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, Phone, Mail, ChevronRight, Globe, UserCircle } from 'lucide-react'
+import { Menu, X, Phone, Mail, ChevronRight, Globe, UserCircle, Sparkles } from 'lucide-react'
 import { Button } from '@/app/(frontend)/components/ui/button'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
@@ -41,11 +41,27 @@ export function Header() {
 
   return (
     <>
+      {/* --- GCAS Awareness Banner --- */}
+      
+<div className="fixed top-0 left-0 right-0 z-[60] bg-gray-400 h-10 flex items-center justify-center border-b border-white/10">
+  <div className="flex items-center gap-3 px-6">
+    <motion.div
+      animate={{ scale: [1, 1.2, 1] }}
+      transition={{ duration: 2, repeat: Infinity }}
+      className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary),0.5)]"
+    />
+    <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.25em] text-white/90">
+      <span className='bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent'>  GCAS awareness </span> is available in the website 
+    </span>
+    
+  </div>
+</div>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
+          // We add 'top-8' to push the header down below the ticker
           scrolled || !isHome
-            ? 'bg-white/80 backdrop-blur-xl border-b border-gray-100 py-3 shadow-sm'
-            : 'bg-transparent py-5'
+            ? 'top-8 bg-white/80 backdrop-blur-xl border-b border-gray-100 py-3 shadow-sm'
+            : 'top-8 bg-transparent py-5'
         }`}
       >
         <nav className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -53,6 +69,7 @@ export function Header() {
             {/* Logo Group */}
             <Link href="/" className="group flex items-center gap-3 outline-none ">
               <div className="relative w-10 h-10 ">
+                {/* Ensure your logo path matches your setup (Supabase vs Local) */}
                 <Image
                   src="/api/media/file/avirat-bba-bca-collage-logo-1.png"
                   alt="Avirat Logo"
@@ -74,7 +91,7 @@ export function Header() {
                     scrolled || !isHome ? 'text-primary' : 'text-white/80'
                   }`}
                 >
-                  University
+                  BBA & BCA College
                 </span>
               </div>
             </Link>
@@ -89,10 +106,9 @@ export function Header() {
               >
                 <UserCircle className={`w-4 h-4 transition-colors group-hover:text-secondary`} />
                 <span className="group-hover:text-secondary transition-colors">Student Portal</span>
-
-                {/* The Animated Underline */}
                 <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full group-hover:left-0" />
               </Link>
+              
               <div className="h-4 w-[1px] bg-gray-300/30" />
 
               <div className="flex items-center gap-3">
@@ -130,10 +146,10 @@ export function Header() {
               <Menu className="h-6 w-6" />
             </button>
           </div>
+          
         </nav>
       </header>
 
-      {/* Full Screen Overlay Menu */}
       <AnimatePresence>
         {fullMenuOpen && (
           <motion.div
@@ -201,19 +217,15 @@ export function Header() {
                     <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">
                       Admissions
                     </p>
-                    <p className="text-sm font-bold text-gray-900">+91 98765 43210</p>
+                    <p className="text-sm font-bold text-gray-900">+91 70467 13410</p>
                   </div>
                   <div>
                     <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">
                       Email Us
                     </p>
-                    <p className="text-sm font-bold text-gray-900">apply@avirat.edu.in</p>
+                    <p className="text-sm font-bold text-gray-900">aviratbba.bca.1709@gmail.com</p>
                   </div>
                 </div>
-                {/* <div className="flex gap-4">
-                  <Button variant="outline" className="rounded-full border-gray-200">Campus Map</Button>
-                  <Button className="rounded-full bg-primary hover:bg-primary/90">Virtual Tour</Button>
-                </div> */}
               </div>
             </div>
           </motion.div>

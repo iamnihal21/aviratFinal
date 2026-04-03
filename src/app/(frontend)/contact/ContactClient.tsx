@@ -288,8 +288,8 @@ export default function ContactClient({ data }: { data: any }) {
       </section>
 
       {/* Emergency Section - High Contrast Terminal */}
-      <section className="py-32 bg-gray-950 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+      <section className="py-32 bg-gradient-to-b to-background from-secondary/20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 " />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
@@ -297,7 +297,7 @@ export default function ContactClient({ data }: { data: any }) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-white/5 border border-white/10 rounded-[4rem] overflow-hidden backdrop-blur-sm">
+            <Card className="bg-gray-800 border border-white/10 rounded-[4rem] overflow-hidden backdrop-blur-sm">
               <CardContent className="p-12 md:p-24 text-center">
                 <div className="w-20 h-20 rounded-3xl bg-red-500/20 flex items-center justify-center mx-auto mb-10 border border-red-500/30">
                   <ShieldAlert className="h-10 w-10 text-red-500" />
@@ -316,11 +316,11 @@ export default function ContactClient({ data }: { data: any }) {
                     className="h-20 px-10 rounded-2xl border-white/10 bg-white/5 text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-gray-950 transition-all min-w-[280px]"
                   >
                     <Phone className="mr-3 h-5 w-5" />
-                    Hotline: +1 (234) 567-8999
+                    Contact: +91 70467 13410
                   </Button>
                   <Button className="h-20 px-10 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-xs hover:scale-105 transition-all min-w-[280px] shadow-2xl shadow-primary/40">
                     <Mail className="mr-3 h-5 w-5" />
-                    emergency@avirat.edu
+                    aviratbba.bca.1709@gmail.com
                   </Button>
                 </div>
               </CardContent>

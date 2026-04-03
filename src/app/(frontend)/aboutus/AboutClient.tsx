@@ -101,7 +101,7 @@ const staggerChildren = {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
           <motion.div ref={heroRef} initial="hidden" animate="visible" variants={staggerChildren} className="max-w-4xl">
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-8 border border-gray-200 shadow-sm">
-              <Sparkles className="w-4 h-4 text-primary" />
+              <Sparkles className="w-4 h-4 text-primary animate-bounce" />
               <span className="text-[10px] font-black uppercase tracking-[0.2em]">About Avirat University</span>
             </motion.div>
             
@@ -235,7 +235,7 @@ const staggerChildren = {
                     <img
                       src={typeof trustee.image === 'string' ? trustee.image : (trustee.image?.url || '')}
                       alt={trustee.name || 'Trustee'}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                      className="w-full h-full object-cover transition-all duration-500 scale-105 group-hover:scale-100"
                     />
                   ) : (
                     <div className="flex items-center justify-center h-full text-gray-400">
@@ -255,20 +255,14 @@ const staggerChildren = {
                     {trustee.message && (
                       <div className="relative">
                         {/* <Quote className="absolute -left-6 top-2 w-10 h-10 text-primary/10 -z-0" /> */}
-                        <p className="italic text-slate-600 mt-6 text-xl leading-relaxed relative z-10">{trustee.message}</p>
+                        <p className="italic text-slate-600 mt-6 text-xl leading-relaxed relative z-10"><span className="text-slate-400 font-bold uppercase text-[10px] block">Message : </span>{trustee.message}</p>
                       </div>
                     )}
-                    <div className="grid sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-slate-100">
+                    <div className=" gap-4 mt-8 pt-8 border-t border-slate-100">
                       {trustee.qualification && (
                         <div className="flex items-center gap-3">
                           <GraduationCap className="w-5 h-5 text-primary" />
-                          <p className="text-sm"><span className="text-slate-400 font-bold uppercase text-[10px] block">Qualification</span>{trustee.qualification}</p>
-                        </div>
-                      )}
-                      {trustee.experience && (
-                        <div className="flex items-center gap-3">
-                          <Briefcase className="w-5 h-5 text-primary" />
-                          <p className="text-sm"><span className="text-slate-400 font-bold uppercase text-[10px] block">Experience</span>{trustee.experience}</p>
+                          <p className="text-md"><span className="text-slate-400 font-bold uppercase text-[10px] block">Experience</span>{trustee.qualification}</p>
                         </div>
                       )}
                     </div>
