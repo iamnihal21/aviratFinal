@@ -262,7 +262,7 @@ const staggerChildren = {
                       {trustee.qualification && (
                         <div className="flex items-center gap-3">
                           <GraduationCap className="w-5 h-5 text-primary" />
-                          <p className="text-md"><span className="text-slate-400 font-bold uppercase text-[10px] block">Experience</span>{trustee.qualification}</p>
+                          <p className="text-md"><span className="text-slate-400 font-bold uppercase text-[10px] block">Profile</span>{trustee.qualification}</p>
                         </div>
                       )}
                     </div>
