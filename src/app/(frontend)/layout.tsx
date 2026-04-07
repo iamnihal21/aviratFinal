@@ -1,22 +1,22 @@
-import React from "react"
+import React from 'react'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Header } from '@/app/(frontend)/components/header'
 import { Footer } from '@/app/(frontend)/components/footer'
-
+import { Analytics } from '@vercel/analytics/react'
 
 import './styles/globals.css'
 // import './globals.css'
 
-
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
   title: 'Avirat BBA & BCA College',
-  description: 'Avirat University is a leading research institution offering undergraduate, graduate, and doctoral programs across engineering, sciences, humanities, and the arts.',
+  description:
+    'Avirat University is a leading research institution offering undergraduate, graduate, and doctoral programs across engineering, sciences, humanities, and the arts.',
   generator: 'v0.app',
   icons: {
     icon: '/favicon.ico',
@@ -40,6 +40,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
